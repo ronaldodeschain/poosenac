@@ -35,6 +35,11 @@ public class Animal {
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
+    @Override
+    public String toString(){
+        return "Pet: " + this.getNome() + " da raça: " + this.getEspecie() +
+        " Idade: " + this.getIdade() + " Sexo: " + this.getSexo();
+    }
 
 
 }
