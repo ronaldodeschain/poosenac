@@ -93,10 +93,38 @@ public class Main{
         String emaildoex = cidade.getText();
         String state = estado.getText();
         JOptionPane.showMessageDialog(null, "Name: " + adress + "\nAge: " + bairronovo + "\nEmail: " + emaildoex + "\nState: " + state);
-            
-        int idade = Integer.parseInt(JOptionPane.showInputDialog(null,"digite a idade: ","idade",JOptionPane.QUESTION_MESSAGE));
-        System.out.println(idade);
+        }
+        
+        JPanel novopainel = new JPanel();
+        JTextField idade = new JTextField(15);
+        JTextField numero = new JTextField(15);
+        JTextField cep = new JTextField(15);
+        JTextField genero = new JTextField(15);
+        JTextField complemento = new JTextField(15);
+        novopainel.add(new JLabel("Idade:"));
+        novopainel.add(idade);
+        novopainel.add(new JLabel("Numero:"));
+        novopainel.add(numero);
+        novopainel.add(new JLabel("Cep:"));
+        novopainel.add(cep);
+        novopainel.add(new JLabel("Genero:"));
+        novopainel.add(genero);
+        novopainel.add(new JLabel("Complemento:"));
+        novopainel.add(complemento);
+        
+        int resultado = JOptionPane.showConfirmDialog(null, novopainel, "Preencha seus dados", JOptionPane.OK_CANCEL_OPTION);
+        if (resultado == JOptionPane.OK_OPTION) {
+        int idadex = Integer.parseInt(idade.getText());
+        int numerox = Integer.parseInt(numero.getText());
+        int cepx = Integer.parseInt(cep.getText());
+        String generox = genero.getText();
+        int complementox = Integer.parseInt(complemento.getText());
 
-}
+        JOptionPane.showMessageDialog(null, "Idade: " + idadex + "\nNumero: " + numerox + "\nCep: " + cepx + "\nGenero: " + generox + "\nComplemento: " + complementox);
+                
+        //int idade = Integer.parseInt(JOptionPane.showInputDialog(null,"digite a idade: ","idade",JOptionPane.QUESTION_MESSAGE));
+        //System.out.println(idade);
+
+        }
     }
 }
