@@ -95,36 +95,133 @@ public class Main{
         JOptionPane.showMessageDialog(null, "Name: " + adress + "\nAge: " + bairronovo + "\nEmail: " + emaildoex + "\nState: " + state);
         }
         
-        JPanel novopainel = new JPanel();
-        JTextField idade = new JTextField(15);
-        JTextField numero = new JTextField(15);
-        JTextField cep = new JTextField(15);
-        JTextField genero = new JTextField(15);
-        JTextField complemento = new JTextField(15);
-        novopainel.add(new JLabel("Idade:"));
-        novopainel.add(idade);
-        novopainel.add(new JLabel("Numero:"));
-        novopainel.add(numero);
-        novopainel.add(new JLabel("Cep:"));
-        novopainel.add(cep);
-        novopainel.add(new JLabel("Genero:"));
-        novopainel.add(genero);
-        novopainel.add(new JLabel("Complemento:"));
-        novopainel.add(complemento);
         
-        int resultado = JOptionPane.showConfirmDialog(null, novopainel, "Preencha seus dados", JOptionPane.OK_CANCEL_OPTION);
-        if (resultado == JOptionPane.OK_OPTION) {
-        int idadex = Integer.parseInt(idade.getText());
-        int numerox = Integer.parseInt(numero.getText());
-        int cepx = Integer.parseInt(cep.getText());
-        String generox = genero.getText();
-        int complementox = Integer.parseInt(complemento.getText());
-
-        JOptionPane.showMessageDialog(null, "Idade: " + idadex + "\nNumero: " + numerox + "\nCep: " + cepx + "\nGenero: " + generox + "\nComplemento: " + complementox);
                 
         //int idade = Integer.parseInt(JOptionPane.showInputDialog(null,"digite a idade: ","idade",JOptionPane.QUESTION_MESSAGE));
         //System.out.println(idade);
+        
+        int resposta = JOptionPane.showConfirmDialog(null, "sim, nao?","Questionamento",JOptionPane.YES_NO_CANCEL_OPTION);
+        System.out.println(resposta);
+        if(resposta == JOptionPane.YES_OPTION){
+            JPanel novopainel = new JPanel();
+            JTextField idade = new JTextField(15);
+            JTextField numero = new JTextField(15);
+            JTextField cep = new JTextField(15);
+            JTextField genero = new JTextField(15);
+            JTextField complemento = new JTextField(15);
+            novopainel.add(new JLabel("Idade:"));
+            novopainel.add(idade);
+            novopainel.add(new JLabel("Numero:"));
+            novopainel.add(numero);
+            novopainel.add(new JLabel("Cep:"));
+            novopainel.add(cep);
+            novopainel.add(new JLabel("Genero:"));
+            novopainel.add(genero);
+            novopainel.add(new JLabel("Complemento:"));
+            novopainel.add(complemento);
+            
+            int resultado = JOptionPane.showConfirmDialog(null, novopainel, "Preencha seus dados", JOptionPane.OK_CANCEL_OPTION);
+            if (resultado == JOptionPane.OK_OPTION) {
+            int idadex = Integer.parseInt(idade.getText());
+            int numerox = Integer.parseInt(numero.getText());
+            int cepx = Integer.parseInt(cep.getText());
+            String generox = genero.getText();
+            int complementox = Integer.parseInt(complemento.getText());
 
+            JOptionPane.showMessageDialog(null, "Idade: " + idadex + "\nNumero: " + numerox + "\nCep: " + cepx + "\nGenero: " + generox + "\nComplemento: " + complementox);
         }
+        }else{
+            JOptionPane.showMessageDialog(null,"Cruj Cruj Tchau","Adios",JOptionPane.WARNING_MESSAGE );
+        }
+        
+        JPanel alunoPanel = new JPanel();
+        JTextField nomeAluno = new JTextField(15);
+        JTextField nota1 = new JTextField(15);
+        JTextField nota2 = new JTextField(15);
+        JTextField nota3 = new JTextField(15);
+        alunoPanel.add(new JLabel("Nome do Aluno"));
+        alunoPanel.add(nomeAluno);
+        alunoPanel.add(new JLabel("Nota 1"));
+        alunoPanel.add(nota1);
+        alunoPanel.add(new JLabel("Nota 2"));
+        alunoPanel.add(nota2);
+        alunoPanel.add(new JLabel("Nota 3"));
+        alunoPanel.add(nota3);
+        int media = 0;
+        int verificaResultado = JOptionPane.showConfirmDialog(null, alunoPanel, "Preencha seus dados", JOptionPane.OK_CANCEL_OPTION);
+        if (verificaResultado == JOptionPane.OK_OPTION) {  
+            String nomeDoAluno = nomeAluno.getText();
+            int nota1x = Integer.parseInt(nota1.getText());
+            int nota2x = Integer.parseInt(nota2.getText());
+            int nota3x = Integer.parseInt(nota3.getText());
+             media = (nota1x + nota2x + nota3x) / 3;
+        }
+        if(media >= 7){
+            JOptionPane.showMessageDialog(null, "Aprovado! Nota: " + media);
+        }else{
+            JOptionPane.showMessageDialog(null, "Reprovado! Nota: " + media);
+        }
+        JPanel pessoa = new JPanel();
+        JTextField nomePessoa = new JTextField(15);
+        JTextField produto1 = new JTextField(15);
+        JTextField preco1 = new JTextField(15);
+        JTextField quantidade1 = new JTextField(15);
+        JTextField produto2 = new JTextField(15);
+        JTextField preco2 = new JTextField(15);
+        JTextField quantidade2 = new JTextField(15);
+        JTextField produto3 = new JTextField(15);
+        JTextField preco3 = new JTextField(15);
+        JTextField quantidade3 = new JTextField(15);
+        pessoa.add(new JLabel("Nome da Pessoa"));
+        pessoa.add(nomePessoa);
+        pessoa.add(new JLabel("Produto 1"));
+        pessoa.add(produto1);
+        pessoa.add(new JLabel("Preço 1"));
+        pessoa.add(preco1);
+        pessoa.add(new JLabel("Quantidade 1"));
+        pessoa.add(quantidade1);
+        pessoa.add(new JLabel("Produto 2"));
+        pessoa.add(produto2);
+        pessoa.add(new JLabel("Preço 2"));
+        pessoa.add(preco2);
+        pessoa.add(new JLabel("Quantidade 2"));
+        pessoa.add(quantidade2);
+        pessoa.add(new JLabel("Produto 3"));
+        pessoa.add(produto3);
+        pessoa.add(new JLabel("Preço 3"));
+        pessoa.add(preco3);
+        pessoa.add(new JLabel("Quantidade 3"));
+        pessoa.add(quantidade3);
+
+        int verificaPessoa = JOptionPane.showConfirmDialog(null, pessoa, "Preencha seus dados", JOptionPane.OK_CANCEL_OPTION);
+        if (verificaPessoa == JOptionPane.OK_OPTION){
+            String nomeDaPessoa = nomePessoa.getText();
+            String produto1x = produto1.getText(); 
+            int preco1x = Integer.parseInt(preco1.getText());
+            int quantidade1x = Integer.parseInt(quantidade1.getText());
+            String produto2x = produto2.getText();
+            int preco2x = Integer.parseInt(preco2.getText());
+            int quantidade2x = Integer.parseInt(quantidade2.getText());
+            String produto3x = produto3.getText();
+            int preco3x = Integer.parseInt(preco3.getText());
+            int quantidade3x = Integer.parseInt(quantidade3.getText());
+            int valor1 = preco1x * quantidade1x;
+            int valor2 = preco2x * quantidade2x;
+            int valor3 = preco3x * quantidade3x;
+            int totalDaSoma = valor1+valor2+valor3;
+            String reposta = totalDaSoma <=100?"tem frete gratis":"tem frete";
+            JOptionPane.showMessageDialog(null, "A compra" +resposta);
+            }
+            
+           
+        } 
+        
+
+
+
+
+
+
+        
     }
-}
+    
