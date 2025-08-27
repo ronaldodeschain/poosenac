@@ -209,8 +209,8 @@ public class Main{
             int valor2 = preco2x * quantidade2x;
             int valor3 = preco3x * quantidade3x;
             int totalDaSoma = valor1+valor2+valor3;
-            String reposta = totalDaSoma <=100?"tem frete gratis":"tem frete";
-            JOptionPane.showMessageDialog(null, "A compra" +resposta);
+            JOptionPane.showMessageDialog(null,"A compra" + (totalDaSoma <=100?"tem frete gratis":"tem frete"));
+            
             }
             
            
