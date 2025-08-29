@@ -4,13 +4,13 @@
 
 ## About Me
 
-I'm a System Developer with a passion for exploring new technologies and tools. I enjoy working on Technology stack and I’m constantly learning new technologies. Here are a few things I love to do:
+I'm a System Developer with a passion for exploring new technologies and tools. I enjoy working on Technology stack and I’m constantly learning new technologies. I love 3d printing and thinking in solutions outisde the box. Here are a few things I love to do:
 
-- 👨‍💻 Coding
-- 🌱 Learning about new tech
-- 📚 Sharing knowledge
-- 📚 Languages
-- [inserir uma imagem] 3d Printing
+-  Coding
+-  Learning about new tech
+-  Sharing knowledge
+-  Languages
+-  3d Printing
 
 ## Skills
 
@@ -26,14 +26,16 @@ I'm a System Developer with a passion for exploring new technologies and tools. 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ronaldodeschain&theme=tokyonight)]
 ## Featured Projects
 
-- [Project 1](https://github.com/YourUsername/Project1): Brief description of the project.
-- [Project 2](https://github.com/YourUsername/Project2): Another project description.
+- [Python Alura](https://github.com/ronaldodeschain/python_alura): Repository for my Python studies.
+- [7 days of HTML](https://github.com/ronaldodeschain/7dayshtml): Desafio de HTML da Alura.
+- [7 days of estrutura](https://github.com/ronaldodeschain/7daysEstrutura): Desafio de estrutura de dados da Alura.
+
 
 ## Connect with Me
 
-- [LinkedIn](https://www.linkedin.com/in/YourLinkedInProfile)
+- [LinkedIn](https://www.linkedin.com/in/ronaldo-lemos-da-silva-8553b692/)
 - [Instagram](https://www.instagram.com/ronaldo_deschain)
-- [Website](https://yourwebsite.com)
+- [GitHub](https://github.com/ronaldodeschain)
 
 
 
