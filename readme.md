@@ -17,7 +17,7 @@ I'm a System Developer with a passion for exploring new technologies and tools. 
 - **Languages**: Python, Java, HTML/CSS
 - **Frameworks**: React, Django,Spring Boot
 - **Tools**: Git, Docker, VSCode, Colab
-- **Cloud**: AWS, GCP
+- **Cloud**: GCP
 
 ## My GitHub Stats
 
@@ -29,6 +29,7 @@ I'm a System Developer with a passion for exploring new technologies and tools. 
 - [Python Alura](https://github.com/ronaldodeschain/python_alura): Repository for my Python studies.
 - [7 days of HTML](https://github.com/ronaldodeschain/7dayshtml): Desafio de HTML da Alura.
 - [7 days of estrutura](https://github.com/ronaldodeschain/7daysEstrutura): Desafio de estrutura de dados da Alura.
+- [Imersão DevOps Alura](https://github.com/ronaldodeschain/imersao_devops_alura): Repositório da imersão DevOps da Alura.
 
 
 ## Connect with Me
