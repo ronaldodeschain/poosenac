@@ -4,6 +4,8 @@
 // import javax.swing.JPanel;
 // import javax.swing.JTextField;
 
+import java.util.Arrays;
+
 public class Main{
     public static void main(String[] args) {
         // System.out.println("--- Animal ---");
@@ -292,11 +294,11 @@ public class Main{
     //     }
     // }
     //impares
-    for(int impar = 0;impar < 200;impar++){
-        if(impar % 2 == 1){
-            System.out.println("impar: "+impar);
-        }
-    }
+    // for(int impar = 0;impar < 200;impar++){
+    //     if(impar % 2 == 1){
+    //         System.out.println("impar: "+impar);
+    //     }
+    // }
     //numeros entre 102 e -102
     // for(int num = 102;num > -102;num-- ){
     //     if(num > 0){
@@ -314,11 +316,36 @@ public class Main{
     //     }
     // }
     //laço até 1000 dos multiplos de 7 e 21
-    for (int num = 0;num < 1000;num++){
-        if(num % 7 == 0 || num % 21 == 0){
-            System.out.println("numero: "+num);
-        }
-    }
+    // for (int num = 0;num < 1000;num++){
+    //     if(num % 7 == 0 || num % 21 == 0){
+    //         System.out.println("numero: "+num);
+    //     }
+    // }
+
+    // int numeros [] = {10,20,30,40,50};
+    // // System.out.println("numero: "+numeros[0]);
+    // for (int i =0;i<numeros.length;i++) {
+    //     System.out.println("numero: "+numeros[i]);
+    // }
+    // String nomes [] ={"juca","jeremias","emanuel","ermac","sub-zero","scorpion","johnny cage","reptile","liu kang","raiden"};
+    // for (int i =0;i<nomes.length;i++) {
+    //     System.out.print("nome: "+nomes[i] + " -");
+    // }   
+    // System.out.println("lero lero");
+    // System.out.println(Arrays.toString(nomes));
+
+    // String capitais [] = {"rio branco","Maceio","Macapá","Manaus","Salvador","Fortaleza","Brasília","Vitória","Goiânia","São Paulo","Curitiba","Florianópolis","entre outras :P"};
+    // System.out.println(Arrays.toString(capitais));
+    // System.out.println("----- X ----- ");
+    // System.out.println(capitais[10]);
+
+    
+    // int numeros [] = {10,154,487,8798,5437,468,1457,68,5457,54578,14545,1545,6898,1457,154};
+    // System.out.println(Arrays.toString(numeros));
+    // System.out.println("----- X ----- ");
+    // System.out.println(" numero da posicao 4: "+  numeros[4] + " e da posicao 7: "+ numeros[7]);
+    double numeros [] = {1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2.0};
+    System.out.println(Arrays.toString(numeros));
 
     }
 }
