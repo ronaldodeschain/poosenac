@@ -1,10 +1,8 @@
-// import java.awt.GridLayout;
+
 // import javax.swing.JLabel;
 // import javax.swing.JOptionPane;
 // import javax.swing.JPanel;
 // import javax.swing.JTextField;
-
-import java.util.Arrays;
 
 public class Main{
     public static void main(String[] args) {
@@ -344,9 +342,64 @@ public class Main{
     // System.out.println(Arrays.toString(numeros));
     // System.out.println("----- X ----- ");
     // System.out.println(" numero da posicao 4: "+  numeros[4] + " e da posicao 7: "+ numeros[7]);
-    double numeros [] = {1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2.0};
-    System.out.println(Arrays.toString(numeros));
+    // double numeros [] = {1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2.0};
+    // System.out.println(Arrays.toString(numeros));
 
+    // int matriz [][] = {{1,2,3},{4,5,6},{7,8,9}};
+    // for (int[] linha : matriz) {
+    //     for (int elemento : linha) {
+    //         System.out.print(elemento + " ");
+    //     }
+    //     System.out.println();
+    // }
+    // String times[][] = {{"inter","outro inter","novo inter","inter ao contrario"},
+    //                     {"gremio","outro gremio","novo gremio","gremio ao contrario"},
+    //                     {"flamengo","outro flamengo","novo flamengo","flamengo ao contrario"},
+    //                     {"palmeiras","outro palmeiras","novo palmeiras","palmeiras ao contrario"}};
+    
+    // for (String[] t : times){
+    //     System.out.println("Time: "+Arrays.toString(t));
+    // }
+    // System.out.println("----- X ----- ");
+    // System.out.println("Time: "+ times[0][1]);
+    // System.out.println("Time: "+ times[1][3]);
+    // int numeros[][] = {{1,2,3,4,5,6,7,8},
+    //                   {9,10,11,12,13,14,15,16},
+    //                   {17,18,19,20,21,22,23,24},
+    //                   {25,26,27,28,29,30,31,32},
+    //                   {33,34,35,36,37,38,39,40},
+    //                   {41,42,43,44,45,46,47,48},
+    //                   {49,50,51,52,53,54,55,56},
+    //                   {57,58,59,60,61,62,63,64}
+    //                   };
+    // for(int[] i:numeros){
+    //     System.out.println(Arrays.toString(i));
+    // }
+    // System.out.println("Selecionando posições");
+    // System.out.println("numero: "+numeros[4][5]);
+    // System.out.println("numero: "+numeros[2][7]);
+    int matriz[][] = {
+        {1,2,3,4},
+        {5,6,7,8},
+        {9,10,11,12},
+        {13,14,15,16}    
+    };
+    int soma = 0;
+    for(int i =0;i<matriz.length;i++){
+        soma += matriz[i][i];
     }
+    System.out.println("Soma dos valores: "+soma);
+    soma = 0;
+    for (int i = 0; i < matriz.length; i++) {
+        for (int j = 0; j < matriz[i].length; j++) {
+            if (i == j) {
+                soma += matriz[i][j];
+            }
+        }
+    }
+    System.out.println("Soma com dois for: "+soma);
+    
+
+}
 }
     
