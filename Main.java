@@ -1,4 +1,8 @@
 
+import java.util.ArrayList;
+import java.util.List;
+
+
 // import javax.swing.JLabel;
 // import javax.swing.JOptionPane;
 // import javax.swing.JPanel;
@@ -378,27 +382,70 @@ public class Main{
     // System.out.println("Selecionando posições");
     // System.out.println("numero: "+numeros[4][5]);
     // System.out.println("numero: "+numeros[2][7]);
-    int matriz[][] = {
-        {1,2,3,4},
-        {5,6,7,8},
-        {9,10,11,12},
-        {13,14,15,16}    
-    };
-    int soma = 0;
-    for(int i =0;i<matriz.length;i++){
-        soma += matriz[i][i];
-    }
-    System.out.println("Soma dos valores: "+soma);
-    soma = 0;
-    for (int i = 0; i < matriz.length; i++) {
-        for (int j = 0; j < matriz[i].length; j++) {
-            if (i == j) {
-                soma += matriz[i][j];
-            }
-        }
-    }
-    System.out.println("Soma com dois for: "+soma);
+    // int matriz[][] = {
+    //     {1,2,3,4},
+    //     {5,6,7,8},
+    //     {9,10,11,12},
+    //     {13,14,15,16}    
+    // };
+    // int soma = 0;
+    // for(int i =0;i<matriz.length;i++){
+    //     soma += matriz[i][i];
+    // }
+    // System.out.println("Soma dos valores: "+soma);
+    // soma = 0;
+    // for (int i = 0; i < matriz.length; i++) {
+    //     for (int j = 0; j < matriz[i].length; j++) {
+    //         if (i == j) {
+    //             soma += matriz[i][j];
+    //         }
+    //     }
+    // }
+    // System.out.println("Soma com dois for: "+soma);
+    // List<String> nomes = new ArrayList<>();
+    // nomes.add("Suvaquiano");
+    // nomes.add("Erisberto");
+    // nomes.add("John Wayne");
+    // nomes.add("Abacaxino");
+    // nomes.add(1,"Setembrino");
+    // String nomeDocidadao = nomes.get(1);
+    // System.out.println(" ===== ");
+    // System.out.println("Nome que peguei: "+nomeDocidadao);
     
+    // System.out.println("nomes = "+nomes.get(1));
+    // // Collections.sort(nomes);
+    // nomes.stream().sorted().forEach(n -> System.out.println("Nome da lista: "+n));
+    // System.out.println("==== X ====");
+    // System.out.println("Exercicio capitais");
+    // List<String> capitais = new ArrayList<>();
+    // capitais.add("Nova Iorque");
+    // capitais.add("Toronto");
+    // capitais.add("Beijing");
+    // capitais.add("Zurique");
+    // capitais.add("Brasilia");
+    // capitais.add("Paris");
+    // capitais.add("Londres");
+    // capitais.add("Istambul");
+    // capitais.add("Constantinopla");
+    // capitais.add("Porto Alegre");
+
+    // capitais.add(3,"Non me toque");
+    // capitais.remove(9);
+    // System.out.println("Na casa do zodiaco de numero 7:"+capitais.get(7));
+    // capitais.stream().sorted().forEach(c -> System.out.println("Capital: "+c));
+    // System.out.println("Tamanho da lista: "+capitais.size());
+   List<Integer> numeros = new ArrayList<>();
+   for(int i=0;i<20;i++){
+    numeros.add(i);
+   }
+   numeros.add(19,42);
+   numeros.remove(5);
+   System.out.println("indice 15: "+numeros.get(15));
+   numeros.stream().forEach(n -> System.out.println("Numero: "+n));
+   System.out.println("Tamanho da lista: "+numeros.size());
+   
+   
+   
 
 }
 }
