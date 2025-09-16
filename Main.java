@@ -442,30 +442,56 @@ public class Main{
     //    System.out.println("indice 15: "+numeros.get(15));
     //    numeros.stream().forEach(n -> System.out.println("Numero: "+n));
     //    System.out.println("Tamanho da lista: "+numeros.size());
-    Stack<String> novaPilha = new Stack<>();
-    novaPilha.add("Erasmo");
-    novaPilha.add("Momoa");
-    novaPilha.push("Jeremias");
-    System.out.println(novaPilha.peek());
-    System.out.println(novaPilha.firstElement());
-    System.out.println(novaPilha.isEmpty());
-    novaPilha.remove(0);
-    System.out.println(novaPilha.firstElement());
-    novaPilha.add(1, "Josue");
-    System.out.println("--- X ---");
-    novaPilha.forEach(e -> System.out.println(e));
+    // Stack<String> novaPilha = new Stack<>();
+    // novaPilha.add("Erasmo");
+    // novaPilha.add("Momoa");
+    // novaPilha.push("Jeremias");
+    // System.out.println(novaPilha.peek());
+    // System.out.println(novaPilha.firstElement());
+    // System.out.println(novaPilha.isEmpty());
+    // novaPilha.remove(0);
+    // System.out.println(novaPilha.firstElement());
+    // novaPilha.add(1, "Josue");
+    // System.out.println("--- X ---");
+    // novaPilha.forEach(e -> System.out.println(e));
 
-    System.out.println("-- -X --- -");
-    Stack<Integer> pilhaNumeros = new Stack<>();
-    for(int i=0;i<20;i++){
-        pilhaNumeros.add(i);
-    }
-    System.out.println("Numero no fim da pilha: "+pilhaNumeros.peek());
-    pilhaNumeros.pop();
-    pilhaNumeros.pop();
-    pilhaNumeros.pop();
-    System.out.println("A pilha ta vazia? "+pilhaNumeros.isEmpty());
-    pilhaNumeros.forEach(n -> System.out.println("Numero: "+n));
+    // System.out.println("-- -X --- -");
+    // Stack<Integer> pilhaNumeros = new Stack<>();
+    // for(int i=0;i<20;i++){
+    //     pilhaNumeros.add(i);
+    // }
+    // System.out.println("Numero no fim da pilha: "+pilhaNumeros.peek());
+    // pilhaNumeros.pop();
+    // pilhaNumeros.pop();
+    // pilhaNumeros.pop();
+    // System.out.println("A pilha ta vazia? "+pilhaNumeros.isEmpty());
+    // pilhaNumeros.forEach(n -> System.out.println("Numero: "+n));
+    Stack<String> nomes = new Stack<>();
+    nomes.push("Olavo");
+    nomes.push("Pilhito");
+    nomes.push("Palhito");
+    nomes.push("Piruilhito");
+    nomes.push("Pilhiton");
+    nomes.push("Pilhitolson");
+    nomes.push("Pilhitolito");
+    nomes.push("Polhito");
+    nomes.push("Pulhito");
+    nomes.push("Tilhito");
+    nomes.push("Olavo");
+    nomes.push("Pilhito");
+    nomes.push("Palhito");
+    nomes.push("Piruilhito");
+    nomes.push("Pilhiton");
+    nomes.push("Pilhitolson");
+    nomes.push("Pilhitolito");
+    nomes.push("Polhito");
+    nomes.push("Pulhito");
+    nomes.push("Tilhito");
+    System.out.println("Tamanho da pilha: "+nomes.size());
+    System.out.println("Primeiro da lista: "+nomes.firstElement());
+    System.out.println("removi xablau");
+    nomes.forEach(n -> System.out.println("nome: "+n));
+    
 
     
    
