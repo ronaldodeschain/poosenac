@@ -1,6 +1,5 @@
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Stack;
 
 
 // import javax.swing.JLabel;
@@ -434,15 +433,41 @@ public class Main{
     // System.out.println("Na casa do zodiaco de numero 7:"+capitais.get(7));
     // capitais.stream().sorted().forEach(c -> System.out.println("Capital: "+c));
     // System.out.println("Tamanho da lista: "+capitais.size());
-   List<Integer> numeros = new ArrayList<>();
-   for(int i=0;i<20;i++){
-    numeros.add(i);
-   }
-   numeros.add(19,42);
-   numeros.remove(5);
-   System.out.println("indice 15: "+numeros.get(15));
-   numeros.stream().forEach(n -> System.out.println("Numero: "+n));
-   System.out.println("Tamanho da lista: "+numeros.size());
+    //    List<Integer> numeros = new ArrayList<>();
+    //    for(int i=0;i<20;i++){
+    //     numeros.add(i);
+    //    }
+    //    numeros.add(19,42);
+    //    numeros.remove(5);
+    //    System.out.println("indice 15: "+numeros.get(15));
+    //    numeros.stream().forEach(n -> System.out.println("Numero: "+n));
+    //    System.out.println("Tamanho da lista: "+numeros.size());
+    Stack<String> novaPilha = new Stack<>();
+    novaPilha.add("Erasmo");
+    novaPilha.add("Momoa");
+    novaPilha.push("Jeremias");
+    System.out.println(novaPilha.peek());
+    System.out.println(novaPilha.firstElement());
+    System.out.println(novaPilha.isEmpty());
+    novaPilha.remove(0);
+    System.out.println(novaPilha.firstElement());
+    novaPilha.add(1, "Josue");
+    System.out.println("--- X ---");
+    novaPilha.forEach(e -> System.out.println(e));
+
+    System.out.println("-- -X --- -");
+    Stack<Integer> pilhaNumeros = new Stack<>();
+    for(int i=0;i<20;i++){
+        pilhaNumeros.add(i);
+    }
+    System.out.println("Numero no fim da pilha: "+pilhaNumeros.peek());
+    pilhaNumeros.pop();
+    pilhaNumeros.pop();
+    pilhaNumeros.pop();
+    System.out.println("A pilha ta vazia? "+pilhaNumeros.isEmpty());
+    pilhaNumeros.forEach(n -> System.out.println("Numero: "+n));
+
+    
    
    
    
