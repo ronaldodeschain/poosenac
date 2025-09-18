@@ -504,20 +504,35 @@ public class Main{
     // numeros.forEach(n -> System.out.println("Numero: "+n));
     // System.out.println("espiar "+numeros.peek());
     // System.out.println(numeros.contains(8));
-    Queue<String> nomesQueue = new LinkedList<>();
-    nomesQueue.add("Jorel");
-    nomesQueue.add("Irmao do Jorel");
-    nomesQueue.add("Vovo Juju");
-    nomesQueue.add("Magal");
-    nomesQueue.add("Relampago Marquinhos");
-    nomesQueue.add("Johnny Cash");
-    nomesQueue.add("Herbert Richards");
-    nomesQueue.forEach(n -> System.out.println(n));
-    System.out.println(nomesQueue.peek());
-    System.out.println("--- X ---");
-    nomesQueue.stream().sorted().forEach(n -> System.out.println(n));
-    System.out.println("XXXX");
-    nomesQueue.forEach(n -> System.out.println(n));
+    // Queue<String> nomesQueue = new LinkedList<>();
+    // nomesQueue.add("Jorel");
+    // nomesQueue.add("Irmao do Jorel");
+    // nomesQueue.add("Vovo Juju");
+    // nomesQueue.add("Magal");
+    // nomesQueue.add("Relampago Marquinhos");
+    // nomesQueue.add("Johnny Cash");
+    // nomesQueue.add("Herbert Richards");
+    // nomesQueue.forEach(n -> System.out.println(n));
+    // System.out.println(nomesQueue.peek());
+    // System.out.println("--- X ---");
+    // nomesQueue.stream().sorted().forEach(n -> System.out.println(n));
+    Queue<Double> n = new LinkedList<>();
+    for(double i=0;i<10;i++){
+        n.add(i);
+    }
+    n.forEach(num -> System.out.println(num));
+    System.out.println(n.peek());
+    n.poll();
+    n.poll();
+    n.poll();
+    n.forEach(num -> System.out.println(num));
+    for(int i=0;i<10;i++){
+        n.poll();
+    }
+    System.out.println("a lista ta vazia? "+n.isEmpty());
+    n.forEach(num -> System.out.println(num));
+    
+    
     
     
     
