@@ -36,5 +36,17 @@ public class Cliente {
         this.email = email;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Cliente{");
+        sb.append("nome=").append(nome);
+        sb.append(", telefone=").append(telefone);
+        sb.append(", endereco=").append(endereco);
+        sb.append(", email=").append(email);
+        sb.append('}');
+        return sb.toString();
+    }
+    
 
 }

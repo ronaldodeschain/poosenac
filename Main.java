@@ -1,10 +1,11 @@
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.ArrayList;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 
-// import javax.swing.JLabel;
-// import javax.swing.JOptionPane;
 // import javax.swing.JPanel;
 // import javax.swing.JTextField;
 
@@ -516,21 +517,65 @@ public class Main{
     // System.out.println(nomesQueue.peek());
     // System.out.println("--- X ---");
     // nomesQueue.stream().sorted().forEach(n -> System.out.println(n));
-    Queue<Double> n = new LinkedList<>();
-    for(double i=0;i<10;i++){
-        n.add(i);
+    // Queue<Double> n = new LinkedList<>();
+    // for(double i=0;i<10;i++){
+    //     n.add(i);
+    // }
+    // n.forEach(num -> System.out.println(num));
+    // System.out.println(n.peek());
+    // n.poll();
+    // n.poll();
+    // n.poll();
+    // n.forEach(num -> System.out.println(num));
+    // for(int i=0;i<10;i++){
+    //     n.poll();
+    // }
+    // System.out.println("a lista ta vazia? "+n.isEmpty());
+    // n.forEach(num -> System.out.println(num));
+
+    Cliente novoCliente = new Cliente();
+    novoCliente.setNome("Erisberto");
+    novoCliente.setTelefone(578845);
+    novoCliente.setEndereco("Rua dos bobos numero zero");
+    novoCliente.setEmail("email@aqui.ouali.com");
+    Cliente outroCliente = new Cliente();
+    outroCliente.setNome("Jorel");
+    outroCliente.setTelefone(57823245);
+    outroCliente.setEndereco("casa do Jorel");
+    outroCliente.setEmail("turmadojorel@aqui.ouali.com");
+    ArrayList<Cliente> fulanos = new ArrayList<>();
+   
+    Cliente clienteCadastrar = new Cliente();
+
+    JPanel panel = new JPanel();
+                JTextField nome = new JTextField(15);
+                JTextField telefone = new JTextField(15);
+                JTextField endereco = new JTextField(15);
+                JTextField email = new JTextField(15);
+                panel.add(new JLabel("Nome:"));
+                panel.add(nome);
+                panel.add(new JLabel("telefone:"));
+                panel.add(telefone);
+                panel.add(new JLabel("endereco:"));
+                panel.add(endereco);
+                panel.add(new JLabel("email:"));
+                panel.add(email);
+                
+                int result = JOptionPane.showConfirmDialog(null, panel, "Please Enter Your Info", JOptionPane.OK_CANCEL_OPTION);
+                if (result == JOptionPane.OK_OPTION) {
+                clienteCadastrar.setNome(nome.getText());
+                clienteCadastrar.setTelefone(Integer.parseInt(telefone.getText()));
+                clienteCadastrar.setEndereco(endereco.getText());
+                clienteCadastrar.setEmail(email.getText());
+                }
+    fulanos.add(clienteCadastrar);
+    var dados = novoCliente;
+    if (dados instanceof Cliente){
+        fulanos.add(dados);
     }
-    n.forEach(num -> System.out.println(num));
-    System.out.println(n.peek());
-    n.poll();
-    n.poll();
-    n.poll();
-    n.forEach(num -> System.out.println(num));
-    for(int i=0;i<10;i++){
-        n.poll();
-    }
-    System.out.println("a lista ta vazia? "+n.isEmpty());
-    n.forEach(num -> System.out.println(num));
+    fulanos.add(outroCliente);
+    fulanos.forEach(c -> System.out.println(c));
+    
     
     
     
