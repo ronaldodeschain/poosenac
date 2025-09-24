@@ -533,51 +533,91 @@ public class Main{
     // System.out.println("a lista ta vazia? "+n.isEmpty());
     // n.forEach(num -> System.out.println(num));
 
-    Cliente novoCliente = new Cliente();
-    novoCliente.setNome("Erisberto");
-    novoCliente.setTelefone(578845);
-    novoCliente.setEndereco("Rua dos bobos numero zero");
-    novoCliente.setEmail("email@aqui.ouali.com");
-    Cliente outroCliente = new Cliente();
-    outroCliente.setNome("Jorel");
-    outroCliente.setTelefone(57823245);
-    outroCliente.setEndereco("casa do Jorel");
-    outroCliente.setEmail("turmadojorel@aqui.ouali.com");
-    ArrayList<Cliente> fulanos = new ArrayList<>();
+    // Cliente novoCliente = new Cliente();
+    // novoCliente.setNome("Erisberto");
+    // novoCliente.setTelefone(578845);
+    // novoCliente.setEndereco("Rua dos bobos numero zero");
+    // novoCliente.setEmail("email@aqui.ouali.com");
+    // Cliente outroCliente = new Cliente();
+    // outroCliente.setNome("Jorel");
+    // outroCliente.setTelefone(57823245);
+    // outroCliente.setEndereco("casa do Jorel");
+    // outroCliente.setEmail("turmadojorel@aqui.ouali.com");
+    // ArrayList<Cliente> fulanos = new ArrayList<>();
    
-    Cliente clienteCadastrar = new Cliente();
+    // Cliente clienteCadastrar = new Cliente();
 
-    JPanel panel = new JPanel();
-                JTextField nome = new JTextField(15);
-                JTextField telefone = new JTextField(15);
-                JTextField endereco = new JTextField(15);
-                JTextField email = new JTextField(15);
-                panel.add(new JLabel("Nome:"));
-                panel.add(nome);
-                panel.add(new JLabel("telefone:"));
-                panel.add(telefone);
-                panel.add(new JLabel("endereco:"));
-                panel.add(endereco);
-                panel.add(new JLabel("email:"));
-                panel.add(email);
+    // JPanel panel = new JPanel();
+    //             JTextField nome = new JTextField(15);
+    //             JTextField telefone = new JTextField(15);
+    //             JTextField endereco = new JTextField(15);
+    //             JTextField email = new JTextField(15);
+    //             panel.add(new JLabel("Nome:"));
+    //             panel.add(nome);
+    //             panel.add(new JLabel("telefone:"));
+    //             panel.add(telefone);
+    //             panel.add(new JLabel("endereco:"));
+    //             panel.add(endereco);
+    //             panel.add(new JLabel("email:"));
+    //             panel.add(email);
+                
+    //             int result = JOptionPane.showConfirmDialog(null, panel, "Please Enter Your Info", JOptionPane.OK_CANCEL_OPTION);
+    //             if (result == JOptionPane.OK_OPTION) {
+    //             clienteCadastrar.setNome(nome.getText());
+    //             clienteCadastrar.setTelefone(Integer.parseInt(telefone.getText()));
+    //             clienteCadastrar.setEndereco(endereco.getText());
+    //             clienteCadastrar.setEmail(email.getText());
+    //             }
+    // fulanos.add(clienteCadastrar);
+    // var dados = novoCliente;
+    // if (dados instanceof Cliente){
+    //     fulanos.add(dados);
+    // }
+    // fulanos.add(outroCliente);
+    // fulanos.forEach(c -> System.out.println(c));
+    
+    Produto novoProduto = new Produto();
+    ArrayList<Produto> listaDeProdutos = new ArrayList<>();
+    var dados = novoProduto;
+    for (int i=0;i<4;i++){
+        JPanel panel = new JPanel();
+                JTextField nomeProduto = new JTextField(15);
+                JTextField unidade = new JTextField(15);
+                JTextField codigoBarra = new JTextField(15);
+                JTextField dataCompra = new JTextField(15);
+                JTextField validade = new JTextField(15);
+                panel.add(new JLabel("Nome do Produto:"));
+                panel.add(nomeProduto);
+                panel.add(new JLabel("unidade:"));
+                panel.add(unidade);
+                panel.add(new JLabel("codigoBarra:"));
+                panel.add(codigoBarra);
+                panel.add(new JLabel("dataCompra:"));
+                panel.add(dataCompra);
+                panel.add(new JLabel("Validade"));
+                panel.add(validade);
                 
                 int result = JOptionPane.showConfirmDialog(null, panel, "Please Enter Your Info", JOptionPane.OK_CANCEL_OPTION);
                 if (result == JOptionPane.OK_OPTION) {
-                clienteCadastrar.setNome(nome.getText());
-                clienteCadastrar.setTelefone(Integer.parseInt(telefone.getText()));
-                clienteCadastrar.setEndereco(endereco.getText());
-                clienteCadastrar.setEmail(email.getText());
+                novoProduto.setNomeProduto(nomeProduto.getText());
+                novoProduto.setUnidade(Integer.parseInt(unidade.getText()));
+                novoProduto.setCodigoBarra(Integer.parseInt(codigoBarra.getText()));
+                novoProduto.setDataCompra(dataCompra.getText());
+                novoProduto.setValidade(validade.getText());
+                
+                
+                listaDeProdutos.add(novoProduto);
                 }
-    fulanos.add(clienteCadastrar);
-    var dados = novoCliente;
-    if (dados instanceof Cliente){
-        fulanos.add(dados);
+                // private String nomeProduto;
+                // private int unidade;
+                // private int codigoBarra;
+                // private String dataCompra;
+                // private String validade;
+            }
+            listaDeProdutos.forEach(p -> System.out.println(p));
+            
+    
     }
-    fulanos.add(outroCliente);
-    fulanos.forEach(c -> System.out.println(c));
-    
-    
-    
     
     
     
@@ -585,6 +625,5 @@ public class Main{
    
    
 
-}
 }
     

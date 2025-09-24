@@ -5,6 +5,7 @@ public class Produto{
     private String dataCompra;
     private String validade;
 
+    
     public void setNomeProduto(String nomeProduto) {
         this.nomeProduto = nomeProduto;
     }
@@ -43,6 +44,19 @@ public class Produto{
 
     public String getValidade() {
         return validade;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Produto{");
+        sb.append("nomeProduto=").append(nomeProduto);
+        sb.append(", unidade=").append(unidade);
+        sb.append(", codigoBarra=").append(codigoBarra);
+        sb.append(", dataCompra=").append(dataCompra);
+        sb.append(", validade=").append(validade);
+        sb.append('}');
+        return sb.toString();
     }
 
 
