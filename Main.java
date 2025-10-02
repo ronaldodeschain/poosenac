@@ -1,12 +1,4 @@
 
-import java.util.ArrayList;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-
-
-// import javax.swing.JPanel;
 // import javax.swing.JTextField;
 
 public class Main{
@@ -576,54 +568,71 @@ public class Main{
     // fulanos.add(outroCliente);
     // fulanos.forEach(c -> System.out.println(c));
     
-    Produto novoProduto = new Produto();
-    ArrayList<Produto> listaDeProdutos = new ArrayList<>();
-    var dados = novoProduto;
-    for (int i=0;i<4;i++){
-        JPanel panel = new JPanel();
-                JTextField nomeProduto = new JTextField(15);
-                JTextField unidade = new JTextField(15);
-                JTextField codigoBarra = new JTextField(15);
-                JTextField dataCompra = new JTextField(15);
-                JTextField validade = new JTextField(15);
-                panel.add(new JLabel("Nome do Produto:"));
-                panel.add(nomeProduto);
-                panel.add(new JLabel("unidade:"));
-                panel.add(unidade);
-                panel.add(new JLabel("codigoBarra:"));
-                panel.add(codigoBarra);
-                panel.add(new JLabel("dataCompra:"));
-                panel.add(dataCompra);
-                panel.add(new JLabel("Validade"));
-                panel.add(validade);
+    // Produto novoProduto = new Produto();
+    // ArrayList<Produto> listaDeProdutos = new ArrayList<>();
+    // var dados = novoProduto;
+    // for (int i=0;i<4;i++){
+    //     JPanel panel = new JPanel();
+    //             JTextField nomeProduto = new JTextField(15);
+    //             JTextField unidade = new JTextField(15);
+    //             JTextField codigoBarra = new JTextField(15);
+    //             JTextField dataCompra = new JTextField(15);
+    //             JTextField validade = new JTextField(15);
+    //             panel.add(new JLabel("Nome do Produto:"));
+    //             panel.add(nomeProduto);
+    //             panel.add(new JLabel("unidade:"));
+    //             panel.add(unidade);
+    //             panel.add(new JLabel("codigoBarra:"));
+    //             panel.add(codigoBarra);
+    //             panel.add(new JLabel("dataCompra:"));
+    //             panel.add(dataCompra);
+    //             panel.add(new JLabel("Validade"));
+    //             panel.add(validade);
                 
-                int result = JOptionPane.showConfirmDialog(null, panel, "Please Enter Your Info", JOptionPane.OK_CANCEL_OPTION);
-                if (result == JOptionPane.OK_OPTION) {
-                novoProduto.setNomeProduto(nomeProduto.getText());
-                novoProduto.setUnidade(Integer.parseInt(unidade.getText()));
-                novoProduto.setCodigoBarra(Integer.parseInt(codigoBarra.getText()));
-                novoProduto.setDataCompra(dataCompra.getText());
-                novoProduto.setValidade(validade.getText());
+    //             int result = JOptionPane.showConfirmDialog(null, panel, "Please Enter Your Info", JOptionPane.OK_CANCEL_OPTION);
+    //             if (result == JOptionPane.OK_OPTION) {
+    //             novoProduto.setNomeProduto(nomeProduto.getText());
+    //             novoProduto.setUnidade(Integer.parseInt(unidade.getText()));
+    //             novoProduto.setCodigoBarra(Integer.parseInt(codigoBarra.getText()));
+    //             novoProduto.setDataCompra(dataCompra.getText());
+    //             novoProduto.setValidade(validade.getText());
                 
                 
-                listaDeProdutos.add(novoProduto);
-                }
-                // private String nomeProduto;
-                // private int unidade;
-                // private int codigoBarra;
-                // private String dataCompra;
-                // private String validade;
-            }
-            listaDeProdutos.forEach(p -> System.out.println(p));
+    //             listaDeProdutos.add(novoProduto);
+    //             }
+    //             // private String nomeProduto;
+    //             // private int unidade;
+    //             // private int codigoBarra;
+    //             // private String dataCompra;
+    //             // private String validade;
+    //         }
+    //         listaDeProdutos.forEach(p -> System.out.println(p));
+         // LocalDate dataDeHoje = LocalDate.now();         
+            // LocalDate dataNascimento = LocalDate.of(1985, 10, 05);
+            // int idade = dataDeHoje.getYear() - dataNascimento.getYear();
             
+            // System.out.println("Data de nascimento: "+dataNascimento);
+            // System.out.println("Idade do cidadão: "+ idade);
+            // System.out.println("Data de hoje: "+dataDeHoje);
+    System.out.println(" ---- X ---- ");
+    // ArrayList<String> nomesDePaises = new ArrayList<>();
+    // nomesDePaises.add("Romenia");
+    // nomesDePaises.add("Russia");
+    // nomesDePaises.add("Albania");
+    // nomesDePaises.add("Bulgaria");
+    // nomesDePaises.add("Bielorussia");
+    // System.out.println(nomesDePaises.get(3));
+    // nomesDePaises.forEach(n -> System.out.println("Pais de nome: "+n));
+
+    NovoProduto p = new NovoProduto("Salaminho","154878");
+    System.out.println("xxxx");
+    System.out.println(p.equals(p));
+    System.out.println("xxxx");
+    System.out.println(p.hashCode());
     
+    
+
+
     }
     
-    
-    
-   
-   
-   
-
 }
-    
