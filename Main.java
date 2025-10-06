@@ -1,5 +1,10 @@
 
 // import javax.swing.JTextField;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
+
 
 public class Main{
     public static void main(String[] args) {
@@ -624,15 +629,37 @@ public class Main{
     // System.out.println(nomesDePaises.get(3));
     // nomesDePaises.forEach(n -> System.out.println("Pais de nome: "+n));
 
-    NovoProduto p = new NovoProduto("Salaminho","154878");
-    System.out.println("xxxx");
-    System.out.println(p.equals(p));
-    System.out.println("xxxx");
-    System.out.println(p.hashCode());
+    // NovoProduto p = new NovoProduto("Salaminho","154878");
+    // System.out.println("xxxx");
+    // System.out.println(p.equals(p));
+    // System.out.println("xxxx");
+    // System.out.println(p.hashCode());
     
+    List<String> frutas = new ArrayList<>();
+    frutas.add("Tomate");
+    frutas.add("Acabate");
+    frutas.add("Cacau");
+    frutas.add("Abacaxi");
+    frutas.add("Figo");
+    String nome = frutas.stream()
+        .filter(f -> f.equals("Acabate"))
+        .findFirst()
+        .orElse(null);
+
+    Iterator<String> iterator = frutas.iterator();
+    while(iterator.hasNext()){
+        String nomeDaFruta = iterator.next();
+        if(nomeDaFruta.equals("Acabate")){
+            iterator.remove();
+        }
+    }
+    System.out.println("-----"+nome);
+    frutas.forEach(f -> System.out.println("Fruta "+f));
+    System.out.println("Feira da Fruta hey!");
+    Random rnd = new Random();
+    java.util.Collections.shuffle(frutas, rnd);
+    frutas.forEach(f -> System.out.println("Fruta "+f));
     
-
-
     }
     
 }
