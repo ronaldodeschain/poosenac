@@ -1,9 +1,7 @@
 
 // import javax.swing.JTextField;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
 
 
 public class Main{
@@ -635,31 +633,87 @@ public class Main{
     // System.out.println("xxxx");
     // System.out.println(p.hashCode());
     
-    List<String> frutas = new ArrayList<>();
-    frutas.add("Tomate");
-    frutas.add("Acabate");
-    frutas.add("Cacau");
-    frutas.add("Abacaxi");
-    frutas.add("Figo");
-    String nome = frutas.stream()
-        .filter(f -> f.equals("Acabate"))
-        .findFirst()
-        .orElse(null);
+    // List<String> frutas = new ArrayList<>();
+    // frutas.add("Tomate");
+    // frutas.add("Acabate");
+    // frutas.add("Cacau");
+    // frutas.add("Abacaxi");
+    // frutas.add("Figo");
+    // String nome = frutas.stream()
+    //     .filter(f -> f.equals("Acabate"))
+    //     .findFirst()
+    //     .orElse(null);
 
-    Iterator<String> iterator = frutas.iterator();
-    while(iterator.hasNext()){
-        String nomeDaFruta = iterator.next();
-        if(nomeDaFruta.equals("Acabate")){
-            iterator.remove();
-        }
-    }
-    System.out.println("-----"+nome);
-    frutas.forEach(f -> System.out.println("Fruta "+f));
-    System.out.println("Feira da Fruta hey!");
-    Random rnd = new Random();
-    java.util.Collections.shuffle(frutas, rnd);
-    frutas.forEach(f -> System.out.println("Fruta "+f));
+    // Iterator<String> iterator = frutas.iterator();
+    // while(iterator.hasNext()){
+    //     String nomeDaFruta = iterator.next();
+    //     if(nomeDaFruta.equals("Acabate")){
+    //         iterator.remove();
+    //     }
+    // }
+    // System.out.println("-----"+nome);
+    // frutas.forEach(f -> System.out.println("Fruta "+f));
+    // System.out.println("Feira da Fruta hey!");
+    // Random rnd = new Random();
+    // java.util.Collections.shuffle(frutas, rnd);
+    // frutas.forEach(f -> System.out.println("Fruta "+f));
+    //exercicio de comparator
     
-    }
+    // class Livros{
+    //     String nome;
+    //     int ano;
+    //     Livros(String nome,int ano){
+    //         this.nome = nome;
+    //         this.ano = ano;
+    //     }
+    //     public String toString(){
+    //         return nome + " - " + ano;
+        
+    //     }
+    // }
+    
+    // List<Livros> livros = new ArrayList<>();
+    // livros.add(new Livros("Eugeneia Gramdet", 1833));
+    // livros.add(new Livros("Le Bal de Sceaux", 1830));
+    // livros.add(new Livros("modeste Mignon",1844));
+    // livros.add(new Livros("Étude de Femme", 1835));
+    // livros.add(new Livros("Le Père Goriot", 1835));
+
+    // System.out.println("Lista de Livros do Honoré du Balzac");
+    // livros.forEach(l -> System.out.println("Livro = "+l));
+    // livros.sort(Comparator.comparing(l -> l.ano));
+
+    // System.out.println("Lista ordenada pelo lançamento");
+    // livros.forEach(l -> System.out.println("Livro = "+l));
+    // 
+    // List<String> pratosBrasileiros = new ArrayList<>();
+    // pratosBrasileiros.add("Torresmo");
+    // pratosBrasileiros.add("Feijoada");
+    // pratosBrasileiros.add("Vatapa");
+    // pratosBrasileiros.add("Churros");
+    // pratosBrasileiros.add("Escondidinho");
+    // pratosBrasileiros.add("Charque");
+    // pratosBrasileiros.add("Cuscuz");
+    // pratosBrasileiros.add("Carreteiro");
+    // pratosBrasileiros.add("Escondidinho de queijo");
+    // pratosBrasileiros.add("Pave");
+
+    // pratosBrasileiros.forEach(p -> System.out.println(p));
+    // List<String> pratosComC = pratosBrasileiros.stream().filter(p -> p.startsWith("C")).collect(Collectors.toList()); 
+    // System.out.println("Pratos novos");
+    // pratosComC.forEach(p -> System.out.println("Prato "+p));
+    
+    List<String> filmes = new ArrayList<>();
+    filmes.add("Senhor dos aneis - Sociedade do Anel");
+    filmes.add("Senhor dos aneis - As duas torres");
+    filmes.add("Senhor dos aneis - O retorno do rei");
+    filmes.add("Blade");
+    filmes.add("Blade Runner");
+    filmes.add("Big Trouble in the Little China");
+    filmes.add("Matrix");
+    filmes.forEach(f -> System.out.println("Filme: " +f));
+
+
+}
     
 }
