@@ -1,15 +1,8 @@
 
 // import javax.swing.JTextField;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main{
     public static void main(String[] args) {
@@ -715,105 +708,173 @@ public class Main{
     // filmes.forEach(f -> System.out.println("Filme: " +f));
 
     //1
-    class Aluno{
-        String nome;
-        LocalDate dataDeNascimento;
-        List<Double> notas = new ArrayList<>(); 
-        Aluno(String nome,LocalDate dataDeNascimento,List<Double> notas){
-            this.nome = nome;
-            this.dataDeNascimento = dataDeNascimento;
-            this.notas = notas;
+    // class Aluno{
+    //     String nome;
+    //     LocalDate dataDeNascimento;
+    //     List<Double> notas = new ArrayList<>(); 
+    //     Aluno(String nome,LocalDate dataDeNascimento,List<Double> notas){
+    //         this.nome = nome;
+    //         this.dataDeNascimento = dataDeNascimento;
+    //         this.notas = notas;
 
-        }
-        //2
-        public double calculaMedia(){
-            return notas.stream().mapToDouble(Double::doubleValue).average().orElse(0.0);
+    //     }
+    //     //2
+    //     public double calculaMedia(){
+    //         return notas.stream().mapToDouble(Double::doubleValue).average().orElse(0.0);
         
-        }
-        public String toString(){
-            return "Nome do Aluno:"+nome+" Media: "+calculaMedia();
-        }
-        //4
-        @Override
-        public boolean equals(Object o) {
-        if (this == o) return true;
-        if(!(o instanceof Aluno)) return false;
+    //     }
+    //     public String toString(){
+    //         return "Nome do Aluno:"+nome+" Media: "+calculaMedia();
+    //     }
+    //     //4
+    //     @Override
+    //     public boolean equals(Object o) {
+    //     if (this == o) return true;
+    //     if(!(o instanceof Aluno)) return false;
 
-        Aluno aluno = (Aluno) o;
+    //     Aluno aluno = (Aluno) o;
 
-        return Objects.equals(nome, aluno.nome);
-        }
+    //     return Objects.equals(nome, aluno.nome);
+    //     }
 
-        @Override
-        public int hashCode() {
-            return Objects.hash(nome);
-        }
+    //     @Override
+    //     public int hashCode() {
+    //         return Objects.hash(nome);
+    //     }
 
 
-    }
-    class Turma{
-        List<Aluno> alunos;
+    // }
+    // class Turma{
+    //     List<Aluno> alunos;
 
-        List<Aluno> top3Alunos(List<Aluno> alunos){
-            List<Aluno> top3 = new ArrayList<>();
-            alunos.sort(Comparator.comparingDouble(Aluno::calculaMedia));
-            Collections.reverse(alunos);
-            for (int i=0;i<3;i++){
-                top3.add(alunos.get(i));
-            }
-            return top3;
-        }
-    }
-    //Feed de notas para objeto Aluno
-    List<Double> notaQuepassa = new ArrayList<>();
-        notaQuepassa.add(8.1);
-        notaQuepassa.add(9.1);
-        notaQuepassa.add(7.5);
-    List<Double> notaQueNPassa = new ArrayList<>();
-        notaQueNPassa.add(5.1);
-        notaQueNPassa.add(1.8);
-        notaQueNPassa.add(5.4);
+    //     List<Aluno> top3Alunos(List<Aluno> alunos){
+    //         List<Aluno> top3 = new ArrayList<>();
+    //         alunos.sort(Comparator.comparingDouble(Aluno::calculaMedia));
+    //         Collections.reverse(alunos);
+    //         for (int i=0;i<3;i++){
+    //             top3.add(alunos.get(i));
+    //         }
+    //         return top3;
+    //     }
+    // }
+    // //Feed de notas para objeto Aluno
+    // List<Double> notaQuepassa = new ArrayList<>();
+    //     notaQuepassa.add(8.1);
+    //     notaQuepassa.add(9.1);
+    //     notaQuepassa.add(7.5);
+    // List<Double> notaQueNPassa = new ArrayList<>();
+    //     notaQueNPassa.add(5.1);
+    //     notaQueNPassa.add(1.8);
+    //     notaQueNPassa.add(5.4);
 
-        //3 
-        List<Aluno> listaDeAlunos = new ArrayList<>();
-        listaDeAlunos.add(new Aluno("Jeremias",LocalDate.of(2025, 05,10),notaQueNPassa));
-        listaDeAlunos.add(new Aluno("Olavinho",LocalDate.of(2015, 2,14),notaQueNPassa));
-        listaDeAlunos.add(new Aluno("Bira",LocalDate.of(1980, 03,8),notaQuepassa));
-        listaDeAlunos.add(new Aluno("Jo",LocalDate.of(1946, 02,01),notaQuepassa));
-        listaDeAlunos.add(new Aluno("Boromir",LocalDate.of(1578, 03,15),notaQuepassa));
-        listaDeAlunos.add(new Aluno("Frodo",LocalDate.of(1025, 11,10),notaQuepassa));
-        listaDeAlunos.add(new Aluno("Jeremias",LocalDate.of(1752, 03,05),notaQueNPassa));
+    //     //3 
+    //     List<Aluno> listaDeAlunos = new ArrayList<>();
+    //     listaDeAlunos.add(new Aluno("Jeremias",LocalDate.of(2025, 05,10),notaQueNPassa));
+    //     listaDeAlunos.add(new Aluno("Olavinho",LocalDate.of(2015, 2,14),notaQueNPassa));
+    //     listaDeAlunos.add(new Aluno("Bira",LocalDate.of(1980, 03,8),notaQuepassa));
+    //     listaDeAlunos.add(new Aluno("Jo",LocalDate.of(1946, 02,01),notaQuepassa));
+    //     listaDeAlunos.add(new Aluno("Boromir",LocalDate.of(1578, 03,15),notaQuepassa));
+    //     listaDeAlunos.add(new Aluno("Frodo",LocalDate.of(1025, 11,10),notaQuepassa));
+    //     listaDeAlunos.add(new Aluno("Jeremias",LocalDate.of(1752, 03,05),notaQueNPassa));
 
-        //5
-        Optional<String> busca = listaDeAlunos.stream().filter(a -> a.nome.startsWith("B")).map(a -> a.nome).findFirst();
-        System.out.println(busca.orElse("Não"));
-        //6
-        listaDeAlunos.removeIf(aluno -> aluno.calculaMedia() < 6.0);
-        //7
-        List<Aluno> aprovados = listaDeAlunos.stream().filter(a -> a.calculaMedia() >= 6.0).collect(Collectors.toList());
+    //     //5
+    //     Optional<String> busca = listaDeAlunos.stream().filter(a -> a.nome.startsWith("B")).map(a -> a.nome).findFirst();
+    //     System.out.println(busca.orElse("Não"));
+    //     //6
+    //     listaDeAlunos.removeIf(aluno -> aluno.calculaMedia() < 6.0);
+    //     //7
+    //     List<Aluno> aprovados = listaDeAlunos.stream().filter(a -> a.calculaMedia() >= 6.0).collect(Collectors.toList());
 
         
-        //8
-        String[] disciplinaslista = {"POO", "HTML", "CSS"};
-        List<String> disciplinas = Arrays.asList(disciplinaslista);
-        //9        
-        listaDeAlunos.sort(Comparator.comparing(a -> a.dataDeNascimento));
-       Turma turma = new Turma();
-       turma.alunos = listaDeAlunos;
-       turma.alunos.sort(Comparator.comparingDouble(Aluno::calculaMedia));
+    //     //8
+    //     String[] disciplinaslista = {"POO", "HTML", "CSS"};
+    //     List<String> disciplinas = Arrays.asList(disciplinaslista);
+    //     //9        
+    //     listaDeAlunos.sort(Comparator.comparing(a -> a.dataDeNascimento));
+    //    Turma turma = new Turma();
+    //    turma.alunos = listaDeAlunos;
+    //    turma.alunos.sort(Comparator.comparingDouble(Aluno::calculaMedia));
        
-       System.out.println(turma.top3Alunos(turma.alunos));
-
-
-
-        
+    //    System.out.println(turma.top3Alunos(turma.alunos));
     
-       
-        
+    // Pair<String,Integer> par = new Pair<>("Eramos",10);
+    // Pair<String,Integer> outroPar = new Pair<String,Integer>("Jorel",25);
+    // List<Pair> listaDePares = new ArrayList<>();
+    // listaDePares.add(par);
+    // listaDePares.add(outroPar);
+    // System.out.println(listaDePares);
 
+    // System.out.println(par);
+    // Pair<String,String> novoPar = new Pair<>("Mithrandir", "Gandalf the grey");
+    // System.out.println(novoPar);
+    // Pair<String,Integer> idade = new Pair<>("Erasmo Carlos",25);
+    // Pair<Double,Double> coordenadas = new Pair<>(17.5,25.8);
+    // System.out.println(idade);
+    // System.out.println(coordenadas);
+    // Triplet<String,String,Integer> produto = new Triplet<>("Sabonete","bom bem bom",10);
+    // System.out.println(produto);
 
+    // String nome = JOptionPane.showInputDialog(null,"Nome, nome?","nome?",JOptionPane.QUESTION_MESSAGE);
+    // String sobrenome = JOptionPane.showInputDialog(null,"Nome, sobrenome?","sobrenome?",JOptionPane.QUESTION_MESSAGE);
+    // String endereco = JOptionPane.showInputDialog(null,"endereco, endereco?","endereco?",JOptionPane.QUESTION_MESSAGE);
+    // String bairro = JOptionPane.showInputDialog(null,"bairro, bairro?","bairro?",JOptionPane.QUESTION_MESSAGE);
+    // String cidade = JOptionPane.showInputDialog(null,"cidade, cidade?","cidade?",JOptionPane.QUESTION_MESSAGE);
+    // String estado = JOptionPane.showInputDialog(null,"estado, estado?","estado?",JOptionPane.QUESTION_MESSAGE);
     
+    // String message = String.format("Olá, %s %s!%nQue mora em: %s, %s, %s - %s",
+    // nome, sobrenome, endereco, bairro, cidade, estado);
+    // JOptionPane.showMessageDialog(null, message, "Mensagem", JOptionPane.INFORMATION_MESSAGE);
 
+    // String novoNome = JOptionPane.showInputDialog(null,"Quede o nome: ","nome?",JOptionPane.QUESTION_MESSAGE);
+    // int idade = Integer.parseInt(JOptionPane.showInputDialog(null,"Quede a idade: ","idade?",JOptionPane.QUESTION_MESSAGE));
+    // int cpf = Integer.parseInt(JOptionPane.showInputDialog(null,"Quede o cpf: ","cpf?",JOptionPane.QUESTION_MESSAGE));
+    // int rg = Integer.parseInt(JOptionPane.showInputDialog(null,"Quede o rg: ","rg?",JOptionPane.QUESTION_MESSAGE));
+    // int cnh = Integer.parseInt(JOptionPane.showInputDialog(null,"Quede a cnh: ","cnh?",JOptionPane.QUESTION_MESSAGE));   
+
+    // String message = String.format("Olá, %s! Que tem %s do cpf %s rg %s cnh %s",novoNome,idade,cpf,rg,cnh);
+    // JOptionPane.showMessageDialog(null, message,"Mensagem", JOptionPane.INFORMATION_MESSAGE);
+    
+    // List<String> cidades = new ArrayList<>(Arrays.asList(
+    //     "São Paulo", "Rio de Janeiro", "Salvador", "Brasília", "Fortaleza",
+    //     "Belo Horizonte", "Manaus", "Curitiba", "Recife", "Goiânia", "Belém",
+    //     "Porto Alegre", "Guarulhos", "Campinas", "São Luís", "São Gonçalo",
+    //     "Maceió", "Duque de Caxias", "Campo Grande", "Natal", "Teresina",
+    //     "São Bernardo do Campo", "Nova Iguaçu", "João Pessoa", "Santo André",
+    //     "Osasco", "São José dos Campos", "Jaboatão dos Guararapes", "Ribeirão Preto",
+    //     "Uberlândia", "Contagem", "Aracaju", "Feira de Santana", "Sorocaba",
+    //     "Joinville", "Juiz de Fora", "Londrina", "Aparecida de Goiânia", "Ananindeua",
+    //     "Niterói", "Porto Velho", "Campos dos Goytacazes", "Belford Roxo", "Serra",
+    //     "Caxias do Sul", "Vila Velha", "Florianópolis", "São João de Meriti", "Mauá",
+    //     "Macapá", "São José do Rio Preto", "Santos", "Mogi das Cruzes", "Betim",
+    //     "Diadema", "Campina Grande", "Jundiaí", "Maringá", "Montes Claros",
+    //     "Carapicuíba", "Olinda", "Piracicaba", "Cariacica", "Bauru", "Rio Branco",
+    //     "Anápolis", "São Vicente", "Vitória", "Caucaia", "Itaquaquecetuba",
+    //     "Pelotas", "Canoas", "Franca", "Ponta Grossa", "Blumenau",
+    //     "Vitória da Conquista", "Paulista", "Ribeirão das Neves", "Uberaba",
+    //     "Cascavel", "Guarujá", "Taubaté", "Petrópolis", "Limeira", "Praia Grande",
+    //     "São José dos Pinhais", "Santarém", "Cuiabá", "Boa Vista", "Suzano",
+    //     "Governador Valadares", "Santa Maria", "Gravataí", "Taboão da Serra",
+    //     "Várzea Grande", "Palmas", "Juazeiro do Norte", "Barueri", "Volta Redonda",
+    //     "Ipatinga"
+    // ));
+    // cidades.add(54,"Mato Leitão");
+    // System.out.println(cidades.size());
+    // cidades.forEach(c -> System.out.println("Cidade: "+c));
+    // System.out.println("Cidade que esta no indice 77:" +cidades.get(77));
+    // List<Integer> numeros = new ArrayList<>();
+    // for (int i=0;i<500;i++){
+    //     numeros.add(i);
+    // }
+    // numeros.add(101,0101);
+    // System.out.println("Tamanho da parada: "+numeros.size());
+    // numeros.forEach(n -> System.out.println("Numero: "+n));
+    // System.out.println("Numero na posição 253: "+numeros.get(253));
+    List<String> binaryList = new ArrayList<>();
+    for(int i=0;i<10;i++){
+        String binary = Integer.toBinaryString(i);
+        binaryList.add(binary);
+    }
+    binaryList.forEach(b -> System.out.println("Numero binario: "+b));
     }
 
 
